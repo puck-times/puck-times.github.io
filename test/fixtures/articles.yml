@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  intro: MyText
+  need_to_know: MyText
+  recap: MyText
+  hot_and_cold: MyText
+  opp_lineup: MyText
+  sharks_lineup: MyText
+  further_reading: MyText
+  memorable_moments: MyText
+  share: MyText
+
+two:
+  title: MyString
+  intro: MyText
+  need_to_know: MyText
+  recap: MyText
+  hot_and_cold: MyText
+  opp_lineup: MyText
+  sharks_lineup: MyText
+  further_reading: MyText
+  memorable_moments: MyText
+  share: MyText

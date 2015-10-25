@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  intro: 
+  need_to_know: 
+  in_case_you_missed_it: 
+  hot_cold: 
+  opp_lineup: 
+  sharks_lineup: 
+  further_reading: 
+  moments: 
+  subscribe: MyText
+
+two:
+  intro: 
+  need_to_know: 
+  in_case_you_missed_it: 
+  hot_cold: 
+  opp_lineup: 
+  sharks_lineup: 
+  further_reading: 
+  moments: 
+  subscribe: MyText

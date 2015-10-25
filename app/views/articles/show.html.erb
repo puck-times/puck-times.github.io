@@ -1,0 +1,42 @@
+<section class="main-section">
+  <h1>
+  <strong>
+  <%= @article.title %> <br> <br>
+  </strong>
+</h1>
+
+<div >
+  <%= @article.intro %>
+  <hr>
+  <%= @article.need_to_know %>
+  <hr>
+  <%= @article.recap %>
+  <hr>
+  <%= @article.hot_and_cold %>
+  <hr>
+  <%= @article.opp_lineup %>
+  <hr>
+  <%= @article.sharks_lineup %>
+  <hr>
+  <%= @article.further_reading %>
+  <hr>
+  <%= @article.memorable_moments %>
+  <hr>
+  <%= @article.share %>
+  <hr>
+
+
+
+</div>
+
+<div class="main-body col-12">
+  <h2>Comments</h2>
+  <%= render @article.comments %>
+<hr>
+  <h2>Add a comment:</h2>
+  <%= render 'comments/form' %>
+
+  <%= link_to 'Edit', edit_article_path(@article) %> |
+  <%= link_to 'View all Articles', articles_path %>
+</div>
+</section>

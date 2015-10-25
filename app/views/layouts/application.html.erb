@@ -1,0 +1,72 @@
+<!-- This page serves as the umbrella HTML for the application -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" type="image/png" href="../assets/images/sharks-favicon.png">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <title> The Puck Times </title>
+        <meta name="keywords" content="San Jose Sharks, sharks news, sharks sharks news brief, nhl news, sharks newsfeed, puck times, pucktimes, san jose sharks daily news, san jose sharks news, sharks game tonight, sharks starting lineup, sharks hockey, sharks, hockey, nhl, San Jose, nhl sharks, sharks fan club, San Jose nhl, roster, sharks schedule">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta name="twitter:image:src" content="imgs/sharks-logo.png">
+        <meta name="twitter:description" content="A curated and concise summary of San Jose Sharks news and highlights.">
+        <meta name="twitter:title" content="Sharks Game-Day Newsbrief">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="og:type" content="article">
+        <meta property="og:description" content="A curated and concise summary of San Jose Sharks news and highlights.">
+        <meta property="og:image" content="imgs/sharks-logo.png">
+        <meta property="og:title" content="Sharks Game-Day Newsbrief">
+        <meta property="og:url" content="http://pucktimes.com/issues/index.html">
+
+     <script>
+//   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+//   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+//   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+//   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+//   ga('create', 'UA-68676808-1', 'auto');
+//   ga('send', 'pageview');
+
+// </script>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <header>
+      <section>
+       <img src="http://pucktimes.com/imgs/pucktimes-logo.png"/>
+        <!-- <img src="assets/images/pucktimes-logo.png" alt="The Puck Times" /> -->
+        </section>
+      <nav class="navbar">
+        <ul>
+            <li> <a href="#" > Home </a> </li>
+            <li> <a href="#" > Today's Issue </a> </li>
+            <li> <a href="http://unbouncepages.com/pucktimes-signup/" > Subscribe</a> </li>
+            <li> <%= link_to 'View all Articles', articles_path %></li>
+            <li> <a href="#" > About Us </a> </li>
+            <li> <%= link_to 'Submit a new article', new_article_path %> </li>
+        </ul>
+      </nav>
+    </header>
+
+<!-- EVERYTHING BELOW HERE IS DYNAMICALLY INSERTED BY THE APP -->
+
+<%= yield %>
+
+<!-- BEGIN FOOTER -->
+      <footer>
+        <div>
+          <ul>
+            <li> <a href="https://www.linkedin.com/in/brianbensch" > Connect on LinkedIn </a>
+              <img src="http://pucktimes.com/imgs/twitter-logo.png" alt="twitter-logo"/> </li>
+            <li> <a href="https://www.facebook.com/bbensch" > Friend us on Facebook </a>
+              <img src="http://pucktimes.com/imgs/facebook-logo.png" alt="facebook-logo"/>  </li>
+            <li> <a href="https://twitter.com/bbensch" > Follow us on Twitter </a>
+              <img src="http://pucktimes.com/imgs/linkedin-logo.gif" alt="linkedin-logo"/>  </li>
+          </ul>
+          <p> &#169;2015 THE PUCK TIMES, LLC -- ALL RIGHTS RESERVED </p>
+        </div>
+    </footer>
+</body>
+</html>

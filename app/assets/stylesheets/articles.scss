@@ -1,0 +1,304 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+  .main {
+  width:100%;
+  max-width: 1200px;
+  text-align: center;
+  margin: auto;
+  }
+  .video {
+    width:30em;
+    height:20em;
+      }
+  .iframe {
+    width: 100%;
+    height: 2000px;
+  }
+  .img {
+    width:80%;
+    max-width: 500px;
+  }
+  h1 {
+    font-family: Arial, sans-serif;
+    font-size: 2em;
+  }
+  h2 {
+    font-family: Arial, sans-serif;
+    font-size: 1.6em;
+  }
+  p, ul li {
+    font-family: Arial, sans-serif;
+    font-size: 1.2em;
+  }
+  header {
+    width:100%;
+    max-width: 1000px;
+    background-color: #036d80;
+    margin: auto;
+  }
+  header img{
+    width:100%;
+    max-width: 1000px;
+    margin: auto;
+  }
+  .navbar {
+    background-color: #036d80;
+    width:100%;
+    max-width: 800px;
+    margin: auto;
+    padding-top: 0px;
+    padding-bottom: .5em;
+  }
+  .navbar ul {
+    text-align: center;
+  }
+  .navbar li {
+      display: inline;
+      font-size: 1em;
+      text-align: center;
+      padding-right: .5em;
+  }
+  .navbar a {
+    color: white;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+  }
+  .navbar a:hover {
+    color: #f28f20;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+  }
+  .main-hero {
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+  }
+  .main-body {
+    text-align: normal;
+    position: relative;
+    margin: auto;
+    max-width: 800px;
+    width:100%;
+  }
+
+  .newsbrief {
+    margin: auto;
+    position: relative;
+    width: 800px;
+    max-width:100%;
+    font-family: Arial, sans-serif;
+    font-size:1.4em;
+  }
+  .recent-list article {
+    margin: auto;
+    width:100%;
+    max-width:1000px;
+  }
+  .recent-list article img {
+    width:400px;
+    max-width: 50%;
+    padding: 1em;
+  }
+  h1 {
+    margin: auto;
+    text-align: center;
+    font-size: 2em;
+  }
+  h5 {
+    margin: auto;
+    text-align: center;
+    font-size: 1.5em;
+  }
+
+/* For mobile phones: */
+.gridlist-mobile-12 {
+  width: 100%;
+}
+/* For desktop: */
+@media only screen and (min-width: 800px) {
+    .gridlist-desktop-6 {width: 46%;
+      padding-left: 2%;
+      padding-right: 2%;
+      float:left;}
+  }
+/* traditional "coffee" grid list setup: */
+@media only screen and (min-width: 800px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }
+.fl-l {float:left}
+.fl-r {float:right}
+.cl-b {clear:both}
+  table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+    text-align: left;
+    vertical-align: bottom;
+    padding: 5px;
+  }
+  table td {
+    border:1px solid black;
+    padding: 5px;
+    font-size: 1em;
+  }
+  table thead {
+    font-size: 1.4em;
+    color:blue;
+    padding: 10px;
+  }
+
+  .button {
+    padding:10px;
+    background-color: #036d80;
+    color: white;
+    font-size: 1.1em;
+    border: 2px solid #666;
+    text-decoration:none;
+    width:70%;
+  }
+
+  .button:hover {
+    padding:10px;
+    background-color: #000000;
+    color: white;
+    border: 2px solid #666;
+    text-decoration:none;
+  }
+  #subscribe {
+    font-size: 1.4em;
+    margin: auto;
+    width: 100%;
+    max-width: 400px;
+  }
+  .cta-center {
+    float:center;
+  }
+  #today-issue {
+    float:left;
+    height: 200px;
+    width: 40%;
+  }
+  #about-us{
+    float:right;
+    width: 40%;
+    font-size: 1em;
+  }
+  .thumbnail-photo {
+    float:right;
+    height:40%;
+  }
+  .widgets-td {
+    position: relative;
+    border: 0px white;
+    margin: auto;
+    width: 50%;
+    padding: 20px;
+    vertical-align: top
+    }
+  table.widgets {
+    margin: auto;
+    border: 0px white;
+    width: 90%;
+    text-align: left;
+    vertical-align: bottom;
+    padding: 5px;
+  }
+
+  #blank-space{
+    height: 300px;
+  }
+  #blank-space-small{
+    height:50px;
+  }
+  .about-us {
+    margin: auto;
+    width:100%;
+    max-width:1000px;
+  }
+  .brian-bio {
+    float:right;
+    width: 250px;
+    max-width: 50%;
+    padding: 20px;
+  }
+  .andy-bio {
+    float:left;
+    width: 250px;
+    max-width: 50%;
+    padding: 20px;
+  }
+
+ html, body {
+    height: 100%;
+}
+.title {display:inline}
+.wrapper {
+    min-height: 100%;
+    margin: 0 auto -5em; /* the bottom margin is the negative value of the footer's height */
+}
+.push {
+  height:150px;
+}
+footer {
+   /*height: 5em; */
+   /* .push must (SHOULD) be the same height as .footer */
+   position:relative;
+   clear:both;
+   background-color:#036d80;
+   text-align: center;
+   left:0px;
+   bottom:0px;
+   width:100%;
+}
+   footer p {
+     color:white ;
+     font-size: .8em;
+  }
+  footer ul {
+    padding-top: 1em;
+  }
+  footer ul li {
+      text-align: center;
+      display: inline;
+      font-size: 1em;
+      padding-right: .5em;
+      padding-top: .5em;
+      margin: auto;
+      color: #036d80;
+    }
+
+  footer img {
+    height:1em;
+  }
+  footer a {
+    color: #f28f20;
+    font-size: 1em;
+  }
+  footer a:hover {
+    color: white;
+  }
+  .btn-social {
+    text-align: center;
+  }
+  .btn-social img {
+    width: 200px;
+    padding: 5px;
+    border: 0;
+    box-shadow: 0;
+    display: inline;
+  }
