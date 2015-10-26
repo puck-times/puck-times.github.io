@@ -3,7 +3,25 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-This profile was created on Oct25th for the sake of hosting a small hockey blog via a Rails App, so that my brother can update content automatically without having to use WordPress.
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
 
 
 Please feel free to use a different markup language if you do not plan to run

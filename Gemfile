@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
-#adding sprockets gem per reco from openshift
-gem 'turbo-sprockets-rails3'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
