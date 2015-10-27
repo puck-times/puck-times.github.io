@@ -28,13 +28,14 @@
     font-family: Arial, sans-serif;
     font-size: 1.6em;
   }
-  p, ul li {
+  h3, ul li {
     font-family: Arial, sans-serif;
-    font-size: 1.2em;
+    font-size: 1em;
+    font-weight: normal;
   }
   header {
     width:100%;
-    max-width: 1000px;
+    max-width: 1200px;
     background-color: #036d80;
     margin: auto;
   }
@@ -246,7 +247,8 @@
  html, body {
     height: 100%;
 }
-.title {display:inline}
+.title-list {display:inline}
+.options-list {display:inline}
 .wrapper {
     min-height: 100%;
     margin: 0 auto -5em; /* the bottom margin is the negative value of the footer's height */
@@ -302,3 +304,14 @@ footer {
     box-shadow: 0;
     display: inline;
   }
+.new-article-form {
+  font-size: 1em;
+  margin:auto;
+  width: 100%;
+  max-width: 1200px;
+}
+.errors {color:red;}
+.main-section{
+  font-size: 1.2em;
+  padding-left: 2em;
+}

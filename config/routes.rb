@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   get 'welcome/pucktimes'
   # get 'articles/new'
 
-#  get 'welcome2/index2'
  get '/today' => 'welcome#pucktimes'
  get '/test2' => 'articles#new'
 

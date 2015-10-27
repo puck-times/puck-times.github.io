@@ -5,38 +5,47 @@
   </strong>
 </h1>
 
-<div >
-  <%= @article.intro %>
+<div class="">
+  <%= simple_format @article.intro %>
   <hr>
-  <%= @article.need_to_know %>
+  <h2>NEED TO KNOW</h2>
+  <%= simple_format @article.need_to_know %>
   <hr>
-  <%= @article.recap %>
+  <h2>IN CASE YOU MISSED IT: Game Recap</h2>
+  <%= simple_format @article.recap %>
   <hr>
-  <%= @article.hot_and_cold %>
+  <h2>WHO's HOT & WHO's COLD?</h2>
+  <%= simple_format @article.hot_and_cold %>
   <hr>
-  <%= @article.opp_lineup %>
+  <h2>OPPOSITION LINEUP</h2>
+  <%= simple_format @article.opp_lineup %>
   <hr>
-  <%= @article.sharks_lineup %>
+  <h2>SHARKS LINEUP</h2>
+  <%= simple_format @article.sharks_lineup %>
   <hr>
-  <%= @article.further_reading %>
+  <h2>FURTHER READING FROM AROUDN THE WEB</h2>
+  <%= simple_format @article.further_reading %>
   <hr>
-  <%= @article.memorable_moments %>
+  <h2>MEMORABLE MOMENTS</h2>
+  <%= simple_format @article.memorable_moments %>
   <hr>
-  <%= @article.share %>
+  <h2>SUBSCRIBE NOW</h2>
+  <%= simple_format @article.share %>
   <hr>
-
+</div>
 
 
 </div>
 
-<div class="main-body col-12">
-  <h2>Comments</h2>
-  <%= render @article.comments %>
-<hr>
-  <h2>Add a comment:</h2>
-  <%= render 'comments/form' %>
-
+<div class="col-3 fl-l">
   <%= link_to 'Edit', edit_article_path(@article) %> |
   <%= link_to 'View all Articles', articles_path %>
+</div>
+<div class="col-9 fl-r">
+  <h2>Comments</h2>
+  <%= render @article.comments %>
+
+  <%= render 'comments/form' %>
+
 </div>
 </section>

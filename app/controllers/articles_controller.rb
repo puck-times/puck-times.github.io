@@ -4,11 +4,11 @@ class ArticlesController < ApplicationController
 
 	#index, show, new, edit, create, update, destroy
 	def index
-	    @articles = Article.all
+	  @articles = Article.all
 	end
 
   def show
-    	@article = Article.find(params[:id])
+    @article = Article.find(params[:id])
 	end
 
 	def new
@@ -21,7 +21,6 @@ class ArticlesController < ApplicationController
 
 	def create
     #the first line below simply returns the URL parameters as a basic text hash
-    # render plain: params[:article].inspect
     @article = Article.new(article_params)
 		if @article.save
     	redirect_to @article
@@ -44,6 +43,14 @@ class ArticlesController < ApplicationController
 	  @article.destroy
 	  redirect_to articles_path
 	end
+
+#I DONT THINK THIS CODE IS WORKING -- NEED TO DEBUG
+def upload
+  uploaded_io = params[:article][:picture]
+  File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
+    file.write(uploaded_io.read)
+  end
+end
 
 private
   def article_params

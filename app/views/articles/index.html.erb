@@ -3,13 +3,14 @@
 
   <% @articles.each do |article| %>
     <div class="main-body col-12">
-      <div class="title col-9 fl-l"> <h2> <%= article.title %></h2> </div>
-      <div class="col-1 fl-r"> <%= link_to 'Show', article_path(article) %></div>
-      <div class="col-1 fl-r"><%= link_to 'Edit', edit_article_path(article) %></div>
-      <div class="col-1 fl-r"><%= link_to 'Destroy', article_path(article),
+      <div class="title-list col-7 cl-b"> <h2> <%= article.title %></h2> </div>
+
+      <div class="options-list col-1 fl-r"><%= link_to 'Edit', edit_article_path(article) %></div>
+      <div class="col-1 fl-r"><%= link_to 'Delete', article_path(article),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></div>
-      <p class="col-12 cl-b"><%= article.intro %></p>
+      <div class="options-list col-2 fl-r"> <%= link_to 'View Article', article_path(article) %></div>
+      <h3 class="col-12 cl-b"><%= article.intro %></h3>
       <hr>
     </div>
   <% end %>
