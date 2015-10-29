@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151025075322) do
+ActiveRecord::Schema.define(version: 20151029220227) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,19 +24,24 @@ ActiveRecord::Schema.define(version: 20151025075322) do
     t.text     "hot_and_cold"
     t.text     "opp_lineup"
     t.text     "sharks_lineup"
-    t.text     "further_reading"
     t.text     "memorable_moments"
     t.text     "share"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+    t.string   "link1_text"
+    t.string   "link1_url"
+    t.string   "link2_text"
+    t.string   "link2_url"
+    t.string   "link3_text"
+    t.string   "link3_url"
   end
 
   create_table "comments", force: :cascade do |t|
-    t.string   "commenter"
-    t.text     "body"
     t.integer  "article_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "username"
+    t.text     "comment_body"
   end
 
   add_index "comments", ["article_id"], name: "index_comments_on_article_id", using: :btree

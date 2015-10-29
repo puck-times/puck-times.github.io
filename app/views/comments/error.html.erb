@@ -1,5 +1,6 @@
+<!-- THIS VIEW IS NOT BEING USED AS OF 10/19 -->
 <%= form_for([@article, @article.comments.build]) do |f| %>
-    <% if @comment != nil && @comment.errors.any? %>
+    <% if @comment.errors.any? %>
     <div id="error_explanation">
       <h2>
         <span class="errors">

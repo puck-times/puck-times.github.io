@@ -191,6 +191,7 @@
     font-family: Arial;
 }
 .link-b {color:white;}
+.center {margin-left:30%; margin-right:20%;}
   .button:hover {
     padding:10px;
     background-color: #000000;
@@ -199,6 +200,10 @@
     text-decoration:none;
   }
   .invisible{visibility: hidden;}
+  .edit-label{
+    font-size: 1.5em;
+    font-style: bold;
+  }
   #subscribe {
     font-size: 1.4em;
     margin: auto;
