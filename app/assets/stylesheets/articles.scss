@@ -139,9 +139,10 @@
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
   }
-.fl-l {float:left}
-.fl-r {float:right}
-.cl-b {clear:both}
+.fl-l {float:left;}
+.fl-r {float:right;}
+.cl-b {clear:both;}
+.m-a {margin:auto;}
   table {
     border: 1px solid black;
     border-collapse: collapse;
@@ -162,17 +163,34 @@
     color:blue;
     padding: 10px;
   }
-
-  .button {
+.edit-button {
+  display:inline;
+  float:left;
+  margin-left:30%;
+  width:5%;
+}
+.delete-button {
+  display:inline;
+  float:left;
+  margin-right:29%;
+  padding-left: 1%;
+  width:5%;
+}
+.button {
+    position: relative;
     padding:10px;
-    background-color: #036d80;
+    background-color: #00788a;
     color: white;
-    font-size: 1.1em;
     border: 2px solid #666;
     text-decoration:none;
-    width:70%;
-  }
-
+    // margin-left: 35%;
+    // margin-right: 35%;
+    width: 30%;
+    min-width: 200px;
+    font-size: larger;
+    font-family: Arial;
+}
+.link-b {color:white;}
   .button:hover {
     padding:10px;
     background-color: #000000;
@@ -180,6 +198,7 @@
     border: 2px solid #666;
     text-decoration:none;
   }
+  .invisible{visibility: hidden;}
   #subscribe {
     font-size: 1.4em;
     margin: auto;
@@ -247,8 +266,6 @@
  html, body {
     height: 100%;
 }
-.title-list {display:inline}
-.options-list {display:inline}
 .wrapper {
     min-height: 100%;
     margin: 0 auto -5em; /* the bottom margin is the negative value of the footer's height */
