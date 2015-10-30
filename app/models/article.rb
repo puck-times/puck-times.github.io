@@ -1,8 +1,7 @@
 class Article < ActiveRecord::Base
   has_many :comments
-  validates  :title, :intro, :need_to_know, :recap, :hot_and_cold, :opp_lineup, :sharks_lineup, :link1_text, :link1_url, :memorable_moments,
-            presence: true,
-            length: { minimum: 5 }
+  validates  :title, :game_date, :intro, :need_to_know, :recap, :hot_and_cold, :link1_text, :link1_url, :memorable_moments,
+            presence: true #, length: { minimum: 5 }
   has_attached_file :photo
   validates_attachment_content_type :photo, content_type: /\Aimage\/.*\Z/
   has_attached_file :photo2
