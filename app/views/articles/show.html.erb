@@ -1,11 +1,13 @@
 <section class="main-section">
-  <h1>
+  <%= link_to 'Edit', edit_article_path(@article), :class=>"link-b" %>
+      <%= link_to 'View all Articles', articles_path, :class=>"link-b" %> <h1>
   <strong>
-  <%= @article.title %> <br> <br>
+  <%= @article.title %> <br>
   </strong>
-</h1>
+  <%= time_tag @article.game_date,:class=>"date" %>
+  </h1>
 
-<div class="">
+<div class="main-article">
   <%= simple_format @article.intro %>
   <hr>
   <h2>NEED TO KNOW</h2>
@@ -19,13 +21,12 @@
   <h2>WHO's HOT & WHO's COLD?</h2>
   <%= simple_format @article.hot_and_cold %>
   <hr class="cl-b">
-  <h2>OPPOSITION LINEUP</h2>
-  <%= simple_format @article.opp_lineup %>
+  <h2>PROJECTED LINEUPS</h2>
+    <iframe class="lineups" src="https://docs.google.com/spreadsheets/d/198GV9bp8GDcmajbt--Jp9M2iFFOdqEgtd7Dgpo2hti0/pubhtml?widget=true&amp;headers=false&range=A1:E16&gid=0"></iframe>
   <hr class="cl-b">
-  <h2>SHARKS LINEUP</h2>
-  <%= simple_format @article.sharks_lineup %>
+    <iframe class="lineups" src="https://docs.google.com/spreadsheets/d/1MrnJLMRrMkW86J0BvOvXHybBygHmMiV8g1ljrA6Fw2I/pubhtml?widget=true&headers=false&range=A1:E16&gid=0">
+  </iframe>
   <hr class="cl-b">
-
   <h2>FURTHER READING FROM AROUND THE WEB</h2>
       <div class="link1">
       <%= simple_format @article.link1_text %>
@@ -56,20 +57,13 @@
   </div>
   </div>
   <hr class="cl-b">
-</div>
 
 
-</div>
-
-<div class="col-3 fl-l">
-  <%= link_to 'Edit', edit_article_path(@article) %> |
-  <%= link_to 'View all Articles', articles_path %>
-</div>
-<div class="col-9 fl-r">
+<div class="col-12 comments">
   <h2>Comments</h2>
   <%= render @article.comments %>
 
   <%= render 'comments/form' %>
-
+</div>
 </div>
 </section>
