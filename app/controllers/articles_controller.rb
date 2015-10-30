@@ -54,6 +54,6 @@ end
 
 private
   def article_params
-    params.require(:article).permit(:title, :intro, :need_to_know, :recap, :hot_and_cold, :opp_lineup, :sharks_lineup, :further_reading, :memorable_moments, :share)
+    params.require(:article).permit(:title, :intro, :need_to_know, :recap, :hot_and_cold, :opp_lineup, :sharks_lineup, :memorable_moments, :link1_text, :link1_url, :link2_text, :link2_url, :link3_text, :link3_url,:share, :photo, :photo2, :photo3)
   end
 end

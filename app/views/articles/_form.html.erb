@@ -17,53 +17,73 @@
 
 <section class="new-article-form">
   <p>
-    <%= f.label :title %><br>
+    <%= f.label :title, "Title", :class=>"edit-label" %><br>
     <%= f.text_area :title, size:"50x2" %>
   </p>
   <p>
-      <%= f.label :picture, "Attach Cover Photo:" %>
-      <%= f.file_field :picture %>
+      <%= f.label :photo, "Attach Cover Photo:", :class=>"edit-label"  %>
   </p>
   <p>
-    <%= f.label :intro %><br>
-    <%= f.text_area :intro, size:"200x10" %>
+    <%= f.label :intro, "Intro", :class=>"edit-label"  %><br>
+    <%= f.text_area :intro, size:"200x6" %>
 
    <p>
-    <%= f.label :need_to_know, "NEED TO KNOW" %><br>
-    <%= f.text_area :need_to_know, size:"200x10" %>
+    <%= f.label :need_to_know, "NEED TO KNOW", :class=>"edit-label"  %><br>
+    <%= f.text_area :need_to_know, size:"200x6" %>
+    <%= f.label :need_to_know, "Attach photo (optional)", :class=>"attach-photo"  %><br>
+    <%= f.file_field :photo  %>
+
   </p>
   <p>
-    <%= f.label :recap, "IN CASE YOU MISSED IT" %><br>
-    <%= f.text_area :recap, size:"200x10" %>
+    <%= f.label :recap, "IN CASE YOU MISSED IT", :class=>"edit-label"  %><br>
+    <%= f.text_area :recap, size:"200x6" %>
+    <%= f.label :need_to_know, "Attach photo (optional)", :class=>"attach-photo"  %><br>
+    <%= f.file_field :photo2 %>
   </p>
   <p>
-    <%= f.label :hot_and_cold, "WHO's HOT? WHO's COLD?" %><br>
-    <%= f.text_area :hot_and_cold, size:"200x10" %>
+    <%= f.label :hot_and_cold, "WHO's HOT? WHO's COLD?", :class=>"edit-label"  %><br>
+    <%= f.text_area :hot_and_cold, size:"200x6" %>
   </p>
   <p>
-    <%= f.label :opp_lineup, "OPPONENT PROJECTED LINEUP" %><br>
-    <%= f.text_area :opp_lineup, size:"200x10" %>
+    <%= f.label :opp_lineup, "OPPONENT PROJECTED LINEUP", :class=>"edit-label"  %><br>
+    <%= f.text_area :opp_lineup, size:"200x6" %>
   </p>
   <p>
-    <%= f.label :sharks_lineup, "SHARKS PROJECTED LINEUP" %><br>
-    <%= f.text_area :sharks_lineup, size:"200x10" %>
+    <%= f.label :sharks_lineup, "SHARKS PROJECTED LINEUP", :class=>"edit-label"  %><br>
+    <%= f.text_area :sharks_lineup, size:"200x6" %>
   </p>
   <p>
-    <%= f.label :further_reading, "FUTHER READING FROM AROUND THE WEB" %><br>
-    <%= f.text_area :further_reading, size:"200x10" %>
+    <%= f.label :link1_text, "FUTHER READING FROM AROUND THE WEB", :class=>"edit-label"  %><br><br>
+
+    <%= f.label :link1_text, "Enter text for article #1" %><br>
+    <%= f.text_area :link1_text, size:"100x1" %> <br>
+    <%= f.label :link1_url, "Enter URL for article #1" %><br>
+    <%= f.text_area :link1_url, size:"100x1" %><br> <br>
+
+    <%= f.label :link2_text, "Enter text for article #2" %><br>
+    <%= f.text_area :link2_text, size:"100x1" %> <br>
+    <%= f.label :link2_url, "Enter URL for article #2" %><br>
+    <%= f.text_area :link2_url, size:"100x1" %><br> <br>
+
+    <%= f.label :link3_text, "Enter text for article #3" %><br>
+    <%= f.text_area :link3_text, size:"100x1" %> <br>
+    <%= f.label :link3_url, "Enter URL for article #3" %><br>
+    <%= f.text_area :link3_url, size:"100x1" %><br> <br>
   </p>
   <p>
-    <%= f.label :memorable_moments, "MEMORABLE MOMENTS" %><br>
-    <%= f.text_area :memorable_moments, size:"200x10" %>
+    <%= f.label :memorable_moments, "MEMORABLE MOMENTS", :class=>"edit-label"  %><br>
+    <%= f.text_area :memorable_moments, size:"200x6" %>
+    <%= f.label :need_to_know, "Attach .GIF file", :class=>"attach-photo"  %><br>
+    <%= f.file_field :photo3 %>
   </p>
   <p>
-    <%= f.label :share, "SHARE & SUBSCRIBE" %><br>
-    <%= f.text_area :share, size:"200x10" %>
+    <%= f.label :share, "SHARE & SUBSCRIBE", :class=>"edit-label"  %><br>
+    <%= f.text_area :share, size:"200x6" %>
   </p>
 
 
-  <p>
-    <%= f.submit %>
-  </p>
+  <div>
+    <%= f.submit 'Create Article', :class=>"button" %>
+  </div>
 </section>
 <% end %>
