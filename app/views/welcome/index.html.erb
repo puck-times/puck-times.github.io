@@ -2,9 +2,14 @@
         <div>
             <h2> The Puck Times is game-day newsbrief for San Jose Sharks fans. We know life is busy and time is scarce, so we scan the news and synthesize it for you, highlighting everything you need to know before the puck drops.
             </h2>
-        <form action="http://unbouncepages.com/pucktimes-signup/" >
-              <input type="submit" class="button" id="subscribe" value="Subscribe">
-        </form>
+      </div>
+      <div>
+          <form action="/today.html" class="cl-b">
+            <input type="submit" class="button" value="Read The Latest Issue">
+          </form>
+          <br> <br>
+      <div class="button cl-b">
+        <%= link_to "Explore The Archives", articles_path %>
       </div>
     </section>
 
@@ -12,12 +17,5 @@
       <div class="col-12">
         <img src="http://cache.desktopnexus.com/thumbseg/1676/1676765-bigthumbnail.jpg" alt="pavs" class="hero">
       </div>
-      <div>
-          <form action="/today.html" class="cl-b">
-            <input type="submit" class="button" value="Read Today's Issue">
-          </form>
-          <br> <br>
-      <div class="button cl-b">
-        <%= link_to "Explore Puck Times Archives", articles_path %>
-      </div>
+
     </section>
