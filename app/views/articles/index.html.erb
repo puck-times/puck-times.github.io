@@ -1,5 +1,6 @@
 <h1>Archives - The Puck Times </h1>
 
+  <% @articles = Article.order('id DESC') %>
   <% @articles.each do |article| %>
     <div class="main-body col-12">
       <div class="title-list col-10"> <h2> <%= article.title %></h2> </div>
