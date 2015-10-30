@@ -1,23 +1,21 @@
-<section class="main-section">
 <h1>Archives - The Puck Times </h1>
 
   <% @articles.each do |article| %>
     <div class="main-body col-12">
       <div class="title-list col-10"> <h2> <%= article.title %></h2> </div>
 
-      <h3 class="col-12 cl-b"><%= article.intro %></h3>
+      <h3 class="col-9 cl-b"><%= article.intro %></h3>
+      <div class="col-3 fl-r"><%= image_tag article.photo.url, :class=>"thumbnail-photo" %></div>
 
-      <div class="edit-button"><%= link_to 'Edit', edit_article_path(article), :class=> "link-b" %></div>
-
-      <button class="fl-l button"> <%= link_to 'Read More', article_path(article), :class=> "link-b" %> </button>
-
-      <div class="delete-button"><%= link_to 'Delete', article_path(article), :class=> "link-b",
+      <button class="button"> <%= link_to 'Read More', article_path(article), :class=> "link-b" %> </button>
+      <div>
+        <div class="edit-button"><%= link_to 'Edit', edit_article_path(article), :class=> "link-b" %></div>
+        <div class="delete-button"><%= link_to 'Delete', article_path(article), :class=> "link-b",
               method: :delete,
               data: { confirm: 'Are you sure?' } %></div>
-      <br> <br> <br>
+        </div>
+      <br>
       <hr class="cl-b">
     </div>
   <% end %>
-
-</section>
 

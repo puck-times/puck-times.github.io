@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
-  get 'welcome/pucktimes'
-  # get 'articles/new'
-
- get '/today' => 'welcome#pucktimes'
- get '/test2' => 'articles#new'
+ get '/index' => 'welcome#index'
+ get '/today' => 'welcome#show'
+ get '/about-us' => 'welcome#about-us'
 
   resources :articles do
   resources :comments
@@ -17,7 +14,7 @@ end
   # You can have the root of your site routed with "root"
 
   #This will set the root page to the .html file named "index" in views > articles
-  root 'articles#index'
+  root 'welcome#index'
 
   #OR, This will set the root page to the .html file named "index" in views > welcome
   # root 'welcome#index'

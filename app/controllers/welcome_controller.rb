@@ -1,6 +1,8 @@
 class WelcomeController < ApplicationController
   def index
   end
-  # def pucktimes
-  # end
+
+  def show
+  redirect_to article_path(Article.last) and return
+  end
 end
