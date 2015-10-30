@@ -3,7 +3,12 @@
   <% @articles = Article.order('id DESC') %>
   <% @articles.each do |article| %>
     <div class="main-body col-12">
-      <div class="title-list col-10"> <h2> <%= article.title %></h2> </div>
+      <div class="title-list col-10"> <h2> <%= article.title %> -
+        <%= article.game_date.to_s[5..6]%>/<%= article.game_date.to_s[8,9]%>/<%= article.game_date.to_s[0..3]%>
+       <!-- %= article.created_at.strftime("%B %d, %Y") %> -->
+     </h2>
+
+   </div>
 
       <h3 class="col-9 fl-l"><%= article.need_to_know %></h3>
       <div class="col-3 fl-r"><%= image_tag article.photo.url, :class=>"thumbnail-photo" %></div>
