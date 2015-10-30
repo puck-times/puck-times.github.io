@@ -4,7 +4,7 @@
     <div class="main-body col-12">
       <div class="title-list col-10"> <h2> <%= article.title %></h2> </div>
 
-      <h3 class="col-9 cl-b"><%= article.intro %></h3>
+      <h3 class="col-9 fl-l"><%= article.intro %></h3>
       <div class="col-3 fl-r"><%= image_tag article.photo.url, :class=>"thumbnail-photo" %></div>
 
       <button class="button"> <%= link_to 'Read More', article_path(article), :class=> "link-b" %> </button>
