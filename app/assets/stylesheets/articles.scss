@@ -183,16 +183,15 @@
     color: white;
     border: 2px solid #666;
     text-decoration:none;
-    // margin-left: 35%;
-    // margin-right: 35%;
     width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
     min-width: 200px;
     font-size: larger;
     font-family: Arial;
 }
 .link-b {color:white;}
-.center {margin-left:30%; margin-right:20%;}
-  .button:hover {
+.button:hover {
     padding:10px;
     background-color: #000000;
     color: white;
@@ -203,12 +202,6 @@
   .edit-label{
     font-size: 1.5em;
     font-style: bold;
-  }
-  #subscribe {
-    font-size: 1.4em;
-    margin: auto;
-    width: 100%;
-    max-width: 400px;
   }
   .cta-center {
     float:center;
@@ -337,3 +330,32 @@ footer {
   font-size: 1.2em;
   padding-left: 2em;
 }
+.article-photos{
+  width:35%;
+  min-width:200px;
+  float:right;
+  padding: 10px 10px 10px 10px;
+}
+.moments-gif{
+  width:50%;
+  min-width:400px;
+  margin-left: 24%;
+  margin-right: 24%;
+  padding: 10px 10px 10px 10px;
+}
+.button {
+    position: relative;
+    padding:10px;
+    background-color: #00788a;
+    border: 2px solid #666;
+    text-decoration:none;
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
+    min-width: 200px;
+    font-size: larger;
+    font-family: Arial;
+    color: white;
+}
+.white-text{color:white;}
+.button a:visited {color: white;}

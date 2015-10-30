@@ -21,8 +21,7 @@
     <%= f.text_area :title, size:"50x2" %>
   </p>
   <p>
-      <%= f.label :picture, "Attach Cover Photo:", :class=>"edit-label"  %>
-      <%= f.file_field :picture %>
+      <%= f.label :photo, "Attach Cover Photo:", :class=>"edit-label"  %>
   </p>
   <p>
     <%= f.label :intro, "Intro", :class=>"edit-label"  %><br>
@@ -31,10 +30,13 @@
    <p>
     <%= f.label :need_to_know, "NEED TO KNOW", :class=>"edit-label"  %><br>
     <%= f.text_area :need_to_know, size:"200x10" %>
+    <%= f.file_field :photo %>
+
   </p>
   <p>
     <%= f.label :recap, "IN CASE YOU MISSED IT", :class=>"edit-label"  %><br>
     <%= f.text_area :recap, size:"200x10" %>
+    <%= f.file_field :photo2 %>
   </p>
   <p>
     <%= f.label :hot_and_cold, "WHO's HOT? WHO's COLD?", :class=>"edit-label"  %><br>
@@ -69,6 +71,7 @@
   <p>
     <%= f.label :memorable_moments, "MEMORABLE MOMENTS", :class=>"edit-label"  %><br>
     <%= f.text_area :memorable_moments, size:"200x10" %>
+    <%= f.file_field :photo3 %>
   </p>
   <p>
     <%= f.label :share, "SHARE & SUBSCRIBE", :class=>"edit-label"  %><br>
