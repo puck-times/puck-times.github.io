@@ -71,11 +71,6 @@
     text-transform: uppercase;
     font-family: Arial, sans-serif;
   }
-  .main-hero {
-    text-align: center;
-    vertical-align: middle;
-    position: relative;
-  }
   .main-body {
     text-align: normal;
     position: relative;
@@ -153,7 +148,8 @@
   }
   .thumbnail-photo {
     float:right;
-    width: 100%
+    width: 100%;
+    margin-bottom: 10px;
   }
   .widgets-td {
     position: relative;
@@ -262,9 +258,9 @@ footer {
 }
 .errors {color:red;}
 .main-section{
-  font-size: 1.2em;
-  padding-left: 2em;
-  width: 100%;
+  font-size: 1.1em;
+  padding-left: 1%;
+  width: 99%;
   max-width: 1200px;
   margin:auto;
 }
@@ -282,7 +278,7 @@ footer {
   padding: 10px 10px 10px 10px;
 }
 .button {
-    position: relative;
+    clear:both;
     padding-top:10px;
     padding-bottom: 10px;
     text-align: center;
@@ -352,3 +348,15 @@ footer {
 .lineups{width:90%; max-width:600px; height:450px; border:0 0 0 0px;}
 .date{font-size: .6em; vertical-align: top;}
 .view-comments{font-color:#036d80}
+.preview{display:inline-block;}
+
+/* For mobile phones: */
+.gridlist-mobile-12 {
+  width: 100%;
+}
+/* For desktop: */
+@media only screen and (min-width: 800px) {
+    .gridlist-desktop-6 {width: 50;  float:left;}
+    .gridlist-desktop-9 {width:75%; float:left;}
+    .gridlist-desktop-3 {width: 25%; float: left;}
+  }
