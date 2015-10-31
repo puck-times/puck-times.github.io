@@ -1,6 +1,6 @@
 class AddTenNewTextSections < ActiveRecord::Migration
   def create_table
-     :articles do |t|
+     change_table :articles do |t|
       t.string :title
       t.text :intro
       t.text :need_to_know
