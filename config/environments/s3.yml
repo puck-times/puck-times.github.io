@@ -1,9 +1,9 @@
-  #s3 paperclip configuration
-  config.paperclip_defaults = {
-    :storage => :s3,
-    :s3_credentials => {
-      :bucket => ENV['puck-times'],
-      :access_key_id => ENV['AKIAIMIIIYQQ7R3KTQJQ'],
-      :secret_access_key => ENV['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']
-    }
-  }
+  # #s3 paperclip configuration
+  # config.paperclip_defaults = {
+  #   :storage => :s3,
+  #   :s3_credentials => {
+  #     :bucket => ENV['puck-times'],
+  #     :access_key_id => ENV['AKIAIMIIIYQQ7R3KTQJQ'],
+  #     :secret_access_key => ENV['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']
+  #   }
+  # }
