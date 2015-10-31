@@ -8,3 +8,4 @@
 # https://s3-us-west-1.amazonaws.com/puck-times/articles/photo2s/000/000/005/original/rinne-nashville-oct31.jpg?
 
 #Paperclip::Attachment.default_options[:s3_host_name] = 's3-us-west-2.amazonaws.com'
+#end point: puck-times.s3-website-us-west-1.amazonaws.com
