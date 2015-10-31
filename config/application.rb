@@ -2,6 +2,12 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
+  # Paperclip (for Amazon) (we use EU servers)
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_host_name => 's3-eu-west-1.amazonaws.com'
+  }
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
