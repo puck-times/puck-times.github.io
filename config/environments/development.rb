@@ -6,7 +6,7 @@ Rails.application.configure do
     :storage => :s3,
     :s3_credentials => {
       :bucket => ENV['puck-times'],
-      :access_key_id = ENV['AKIAJYFKB37X2KZO635A'],
+      :access_key_id => ENV['AKIAJYFKB37X2KZO635A'],
       :secret_access_key => ENV['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']
     }
   }
