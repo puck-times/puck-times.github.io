@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 
 #aws configuration for image/video file storage
-gem "aws-sdk"
 gem "aws-s3"
+gem 'aws-sdk-v1'
+gem 'aws-sdk', '~> 2'
 #paperclim gem for image processing; also had to install ImageMagick on MacOS
 gem "paperclip", "~> 4.3"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
