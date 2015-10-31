@@ -6,10 +6,10 @@ class CommentsController < ApplicationController
     @article = Article.find(params[:article_id])
     @comment = @article.comments.create(comment_params)
     if @comment.errors.any?
-        render 'articles/show'
+        render 'comments/error'
         # render 'error'
       else
-        redirect_to article_path(@article)
+        redirect_to article_path(@article, :anchor=>"comments")
     end
   end
 
@@ -17,11 +17,11 @@ class CommentsController < ApplicationController
     @article = Article.find(params[:article_id])
     @comment = @article.comments.find(params[:id])
     @comment.destroy
-    redirect_to article_path(@article)
+      redirect_to article_path(@article, :anchor=>"comments")
   end
 
   private
     def comment_params
-      params.require(:comment).permit(:username, :comment_body)
+      params.require(:comment).permit(:username, :comment_body, :email)
     end
 end

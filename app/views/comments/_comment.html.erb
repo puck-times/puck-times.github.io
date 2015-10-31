@@ -1,15 +1,16 @@
 <div>
-  <strong>Username:</strong>
+  <strong>User:</strong>
   <%= comment.username %>
 </div>
 
 <div>
-  <strong>Comment:</strong>
+  <strong>  <!-- %= comment.created_at.strftime("%B %d, %Y") %>: -->
+  </strong>
   <%= comment.comment_body %>
 </div>
 <div>
-  <%= link_to 'Delete Comment', [comment.article, comment],
+  <%= link_to 'Remove Comment', [comment.article, comment],
                method: :delete,
-               data: { confirm: 'Are you sure?' } %>
+               data: { confirm: 'Are you sure?' }, :class=>"link-b" %>
 </div>
 <br>

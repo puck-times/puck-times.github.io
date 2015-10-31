@@ -1,5 +1,8 @@
-<%= form_for([@article, @article.comments.build]) do |f| %>
+<%= form_for([@article, @article.comments.build])  do |f| %>
+<!-- Was trying to modify this line to include an anchor to #comments section -->
+<!-- %= form_for @article.comment, article_path(@article.comment, :anchor =>'comments')  do |f| %> -->
     <% if @comment != nil && @comment.errors.any? %>
+
     <div id="error_explanation">
       <h2>
         <span class="errors">
@@ -15,14 +18,16 @@
   <% end %>
 
   <div>
-    <%= f.label :username, "Enter username (required)" %><br>
-    <%= f.text_field :username, size:"50x10" %>
+    <%= f.label :username, "Enter name or alias:" %>
+    <%= f.text_field :username, size:"55x10" %><br>
+    <%= f.label :email, "Email address (private):      " %>
+    <%= f.text_field :email, size:"50x10" %>
   </div>
   <div>
     <%= f.label :comment_body, "Share your comment..." %><br>
-    <%= f.text_area :comment_body, size:"100x10" %>
+    <%= f.text_area :comment_body, size:"100x5" %>
   </div>
   <div>
-    <%= f.submit %>
+    <%= f.submit 'Add Comment', :class=>"comment-button"%>
   </div>
 <% end %>

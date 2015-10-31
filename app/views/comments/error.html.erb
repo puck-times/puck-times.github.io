@@ -1,11 +1,11 @@
-<!-- THIS VIEW IS NOT BEING USED AS OF 10/19 -->
-<%= form_for([@article, @article.comments.build]) do |f| %>
-    <% if @comment.errors.any? %>
+<%= form_for([@article, @article.comments.build])  do |f| %>
+    <% if @comment != nil && @comment.errors.any? %>
+
     <div id="error_explanation">
       <h2>
         <span class="errors">
           <%= pluralize(@comment.errors.count, "error") %>
-        </span> prohibited this article from being saved:
+        </span> prohibited this article from being saved. Hit "back" and try again, or re-enter your comment below.
       </h2>
       <ul>
         <% @comment.errors.full_messages.each do |msg| %>
@@ -16,14 +16,16 @@
   <% end %>
 
   <div>
-    <%= f.label :username, "Enter username (required)" %><br>
-    <%= f.text_field :username, size:"50x10" %>
+    <%= f.label :username, "Enter name or alias:" %>
+    <%= f.text_field :username, size:"55x10" %><br>
+    <%= f.label :email, "Email address (private):      " %>
+    <%= f.text_field :email, size:"50x10" %>
   </div>
   <div>
     <%= f.label :comment_body, "Share your comment..." %><br>
-    <%= f.text_area :comment_body, size:"100x10" %>
+    <%= f.text_area :comment_body, size:"100x5" %>
   </div>
   <div>
-    <%= f.submit %>
+    <%= f.submit 'Add Comment', :class=>"comment-button"%>
   </div>
 <% end %>

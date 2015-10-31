@@ -1,6 +1,7 @@
 class Comment < ActiveRecord::Base
   belongs_to :article
-  validates  :username, :comment_body,
+  validates :comment_body, :username,
             presence: true
-            # length: { minimum: 5 }
+  validates :email, format: { with: /@/,
+    message: "Must enter valid email address" }
 end

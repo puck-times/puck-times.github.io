@@ -12,14 +12,17 @@
 
       <h3 class="col-9 fl-l"><%= article.need_to_know %></h3>
       <div class="col-3 fl-r"><%= image_tag article.photo.url, :class=>"thumbnail-photo" %></div>
-
-      <button class="button"> <%= link_to 'Read More', article_path(article), :class=> "link-b" %> </button>
+      <button class="button"> <%= link_to 'View Article', article_path(article) %> </button>
       <div>
-        <div class="edit-button"><%= link_to 'Edit', edit_article_path(article), :class=> "link-b" %></div>
-        <div class="delete-button"><%= link_to 'Delete', article_path(article), :class=> "link-b",
+        <div class="edit-button">
+          <%= link_to 'Edit', edit_article_path(article), :class=> "link-b" %></div>
+        <div class="see-comments">
+          <%= link_to 'Read Comments', article_path(article, anchor:"comments"), :class=>"view-comments" %></div>
+        <div class="delete-button">
+          <%= link_to 'Delete', article_path(article), :class=> "link-b",
               method: :delete,
               data: { confirm: 'Are you sure?' } %></div>
-        </div>
+      </div>
       <br>
       <hr class="cl-b">
     </div>

@@ -1,6 +1,7 @@
 <section class="main-section">
   <%= link_to 'Edit', edit_article_path(@article), :class=>"link-b" %>
-      <%= link_to 'View all Articles', articles_path, :class=>"link-b" %> <h1>
+      <%= link_to 'View all Articles', articles_path, :class=>"link-b" %>
+<h1>
   <strong>
   <%= @article.title %> <br>
   </strong>
@@ -60,7 +61,9 @@
 
 
 <div class="col-12 comments">
-  <h2>Comments</h2>
+
+  <a id="comments"> </a>
+  <h2> Comments</h2>
   <%= render @article.comments %>
 
   <%= render 'comments/form' %>
