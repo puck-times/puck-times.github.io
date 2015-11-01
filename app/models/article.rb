@@ -8,6 +8,7 @@ class Article < ActiveRecord::Base
   has_attached_file :photo,
         :styles => { :medium => "x300", :thumb => "x100" },
         :storage => :s3,
+        #USE THIS FOR HEROKU
         :s3_credentials => {
             :bucket => ENV['S3_BUCKET_NAME'],
             :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
@@ -31,7 +32,14 @@ class Article < ActiveRecord::Base
   :styles => { :medium => "x300", :thumb => "x100" },
         :storage => :s3,
         :bucket => 'puck-times',
-         :s3_credentials => "#{Rails.root}/config/aws.yml",
+         #USE THE BELOW CREDENTIALS FOR LOCAL TESTING
+         # :s3_credentials => "#{Rails.root}/config/aws.yml",
+         #USE THIS FOR HEROKU
+         :s3_credentials => {
+            :bucket => ENV['S3_BUCKET_NAME'],
+            :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+            :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+            },
          :url => ':s3_domain_url',
          :path => '/:class/:attachment/:id_partition/:style/:filename',
          :s3_host_name => 's3-us-west-1.amazonaws.com'
@@ -42,8 +50,14 @@ class Article < ActiveRecord::Base
   :styles => { :medium => "x300", :thumb => "x100" },
         :storage => :s3,
         :bucket => 'puck-times',
-         :s3_credentials => "#{Rails.root}/config/aws.yml",
-         :url => ':s3_domain_url',
+         #USE THE BELOW CREDENTIALS FOR LOCAL TESTING
+         # :s3_credentials => "#{Rails.root}/config/aws.yml",
+         #USE THIS FOR HEROKU
+         :s3_credentials => {
+            :bucket => ENV['S3_BUCKET_NAME'],
+            :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+            :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+            },         :url => ':s3_domain_url',
          :path => '/:class/:attachment/:id_partition/:style/:filename',
          :s3_host_name => 's3-us-west-1.amazonaws.com'
 
