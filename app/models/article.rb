@@ -14,18 +14,12 @@ class Article < ActiveRecord::Base
             :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
             :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
             },
-        #THESE WERE MANUALLY USED PRIOR TO SUCCESSFULLY FIGURING OUT HOW THE CONFIGS/AWS.YML file worked; THEY ARE NOW EXPIRED.
-        # :s3_credentials => {
-        #     :access_key_id => "AKIAJEQR67DRO7EWLF5A",
-        #     :secret_access_key => "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"},
-
         # #USE THE BELOW CREDENTIALS FOR LOCAL TESTING
         #  :s3_credentials => "#{Rails.root}/config/aws.yml",
         #  :bucket => 'puck-times',
          :url => ':s3_domain_url',
          :path => '/:class/:attachment/:id_partition/:style/:filename',
          :s3_host_name => 's3-us-west-1.amazonaws.com'
-
   validates_attachment_content_type :photo, content_type: /\Aimage\/.*\Z/
 
   has_attached_file :photo2,
@@ -43,7 +37,6 @@ class Article < ActiveRecord::Base
          :url => ':s3_domain_url',
          :path => '/:class/:attachment/:id_partition/:style/:filename',
          :s3_host_name => 's3-us-west-1.amazonaws.com'
-
   validates_attachment_content_type :photo2, content_type: /\Aimage\/.*\Z/
 
   has_attached_file :photo3,
@@ -60,8 +53,6 @@ class Article < ActiveRecord::Base
             },         :url => ':s3_domain_url',
          :path => '/:class/:attachment/:id_partition/:style/:filename',
          :s3_host_name => 's3-us-west-1.amazonaws.com'
-
-
   validates_attachment_content_type :photo3, content_type: /\Aimage\/.*\Z/
 end
 
