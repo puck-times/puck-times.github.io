@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+#gem 'puma'
 #aws configuration for image/video file storage; reverted to just usingi gem "aws-sdd" at 334pm --> broke local hosting; reverted again to include 'aws-sdk-v1' and 'aws-sdk', '~> 2' at 344pm; localhost rails server now works again.
 #gem "aws-sdk"
  gem "aws-s3"
