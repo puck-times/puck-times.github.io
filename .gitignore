@@ -17,4 +17,4 @@
 /tmp
 
 # Ignfore AWS credentials
-/config/environments/aws.yml
+/config/aws.yml

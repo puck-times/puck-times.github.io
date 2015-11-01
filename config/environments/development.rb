@@ -5,10 +5,20 @@ Rails.application.configure do
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
-      :bucket => 'puck-times',
-      :s3_credentials => "#{Rails.root}/config/aws.yml",
+      :bucket => ENV['S3_BUCKET_NAME'],
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
     }
   }
+
+# #the below configs appears necessary to allow localized testing, but not images remained un-viewable
+#   config.paperclip_defaults = {
+#     :storage => :s3,
+#     :s3_credentials => {
+#       :bucket => 'puck-times',
+#       :s3_credentials => "#{Rails.root}/config/environments/aws.yml",
+#     }
+#   }
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
