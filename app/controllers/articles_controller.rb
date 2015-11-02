@@ -44,15 +44,16 @@ class ArticlesController < ApplicationController
 	  redirect_to articles_path
 	end
 
-#I DONT THINK THIS CODE IS WORKING -- NEED TO DEBUG
-def upload
-  uploaded_io = params[:article][:picture]
-  File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
-    file.write(uploaded_io.read)
-  end
-end
+# #I DONT THINK THIS CODE IS WORKING -- SHOULD BE ABLE TO REMOVE
+# def upload
+#   uploaded_io = params[:article][:picture]
+#   File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
+#     file.write(uploaded_io.read)
+#   end
+# end
 
 private
+  # Anytime new fields are added to the model, they must be included here in order to be passed through the URL as params
   def article_params
     params.require(:article).permit(:title, :game_date, :intro, :need_to_know, :recap, :hot_and_cold, :opp_lineup, :sharks_lineup, :memorable_moments, :link1_text, :link1_url, :link2_text, :link2_url, :link3_text, :link3_url,:share, :photo, :photo2, :photo3)
   end

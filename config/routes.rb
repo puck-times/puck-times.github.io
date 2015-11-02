@@ -16,9 +16,6 @@ end
   #This will set the root page to the .html file named "index" in views > articles
   root 'welcome#index'
 
-  #OR, This will set the root page to the .html file named "index" in views > welcome
-  # root 'welcome#index'
-
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
