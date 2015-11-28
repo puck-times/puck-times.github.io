@@ -26,11 +26,127 @@
   <h2>WHO's HOT & WHO's COLD?</h2>
   <%= simple_format @article.hot_and_cold %>
   <hr class="cl-b">
-  <h2>PROJECTED LINEUPS</h2>
-    <iframe class="lineups" src="https://docs.google.com/spreadsheets/d/198GV9bp8GDcmajbt--Jp9M2iFFOdqEgtd7Dgpo2hti0/pubhtml?widget=true&amp;headers=false&range=A1:E16&gid=0"></iframe>
+
+<h2>SHARKS PROJECTED LINEUP</h2>
+<table class="lineups">
+      <tr>
+        <th> Goaltender </th>
+        <td> <%= simple_format @article.sharks_gk %> </td>
+      </tr>
+    </table>
+
+<hr class="cl-b">
+
+    <table class="defense">
+      <tr>
+        <th> Defense </th>
+      </tr>
+      <tr>
+        <td> <%= simple_format @article.sharks_d1 %> </td>
+        <td> <%= simple_format @article.sharks_d2 %> </td>
+      </tr>
+      <tr>
+        <td> <%= simple_format @article.sharks_d3 %> </td>
+        <td> <%= simple_format @article.sharks_d4 %> </td>
+      </tr>
+      <tr>
+        <td> <%= simple_format @article.sharks_d5 %> </td>
+        <td> <%= simple_format @article.sharks_d6 %> </td>
+      </tr>
+    </table>
+
+<hr class="cl-b">
+
+    <table class="forwards">
+      <tr>
+        <th> Left Wing </th>
+        <th> Center </th>
+        <th> Right Wing </th>
+      </tr>
+      <tr>
+        <td> <%= simple_format @article.sharks_f1 %> </td>
+        <td> <%= simple_format @article.sharks_f2 %> </td>
+        <td> <%= simple_format @article.sharks_f3 %> </td>
+      </tr>
+      <tr>
+        <td> <%= simple_format @article.sharks_f4 %> </td>
+        <td> <%= simple_format @article.sharks_f5 %> </td>
+        <td> <%= simple_format @article.sharks_f6 %> </td>
+      </tr>
+      <tr>
+        <td> <%= simple_format @article.sharks_f7 %> </td>
+        <td> <%= simple_format @article.sharks_f8 %> </td>
+        <td> <%= simple_format @article.sharks_f9 %> </td>
+      </tr>
+            <tr>
+        <td> <%= simple_format @article.sharks_f10 %> </td>
+        <td> <%= simple_format @article.sharks_f11 %> </td>
+        <td> <%= simple_format @article.sharks_f12 %> </td>
+      </tr>
+    </table>
+    <!-- <iframe class="lineups" src="https://docs.google.com/spreadsheets/d/1MrnJLMRrMkW86J0BvOvXHybBygHmMiV8g1ljrA6Fw2I/pubhtml?widget=true&headers=false&range=A1:E16&gid=0">
+  </iframe> -->
+
+  <h2>OPPOSITION PROJECTED LINEUP</h2>
+    <table class="lineups">
+      <tr>
+        <th> Goaltender </th>
+        <td> <%= simple_format @article.opp_gk %> </td>
+      </tr>
+    </table>
+
+<hr class="cl-b">
+
+    <table class="defense">
+      <tr>
+        <th> Defense </th>
+      </tr>
+      <tr>
+        <td> <%= simple_format @article.opp_d1 %> </td>
+        <td> <%= simple_format @article.opp_d2 %> </td>
+      </tr>
+      <tr>
+        <td> <%= simple_format @article.opp_d3 %> </td>
+        <td> <%= simple_format @article.opp_d4 %> </td>
+      </tr>
+      <tr>
+        <td> <%= simple_format @article.opp_d5 %> </td>
+        <td> <%= simple_format @article.opp_d6 %> </td>
+      </tr>
+    </table>
+
+<hr class="cl-b">
+
+    <table class="forwards">
+      <tr>
+        <th> Left Wing </th>
+        <th> Center </th>
+        <th> Right Wing </th>
+      </tr>
+      <tr>
+        <td> <%= simple_format @article.opp_f1 %> </td>
+        <td> <%= simple_format @article.opp_f2 %> </td>
+        <td> <%= simple_format @article.opp_f3 %> </td>
+      </tr>
+      <tr>
+        <td> <%= simple_format @article.opp_f4 %> </td>
+        <td> <%= simple_format @article.opp_f5 %> </td>
+        <td> <%= simple_format @article.opp_f6 %> </td>
+      </tr>
+      <tr>
+        <td> <%= simple_format @article.opp_f7 %> </td>
+        <td> <%= simple_format @article.opp_f8 %> </td>
+        <td> <%= simple_format @article.opp_f9 %> </td>
+      </tr>
+            <tr>
+        <td> <%= simple_format @article.opp_f10 %> </td>
+        <td> <%= simple_format @article.opp_f11 %> </td>
+        <td> <%= simple_format @article.opp_f12 %> </td>
+      </tr>
+    </table>
+    <!-- <iframe class="lineups" src="https://docs.google.com/spreadsheets/d/198GV9bp8GDcmajbt--Jp9M2iFFOdqEgtd7Dgpo2hti0/pubhtml?widget=true&amp;headers=false&range=A1:E16&gid=0"></iframe> -->
   <hr class="cl-b">
-    <iframe class="lineups" src="https://docs.google.com/spreadsheets/d/1MrnJLMRrMkW86J0BvOvXHybBygHmMiV8g1ljrA6Fw2I/pubhtml?widget=true&headers=false&range=A1:E16&gid=0">
-  </iframe>
+
   <hr class="cl-b">
   <h2>FURTHER READING FROM AROUND THE WEB</h2>
       <div class="link1">

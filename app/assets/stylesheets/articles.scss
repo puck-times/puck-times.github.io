@@ -346,7 +346,7 @@ footer {
 .link-b {color:white;}
 #link-teal {color:#036d80;}
 .hero {width:70%; min-width:350px; padding:2.5% 15% 2.5% 15%}
-.lineups{width:90%; max-width:600px; height:450px; border:0 0 0 0px;}
+.lineups_iframe {width:90%; max-width:600px; height:450px; border:0 0 0 0px;}
 .date{font-size: .6em; vertical-align: top;}
 .view-comments{font-color:#036d80}
 .preview{display:inline-block;}
@@ -361,3 +361,21 @@ footer {
     .gridlist-desktop-9 {width:75%; float:left;}
     .gridlist-desktop-3 {width: 25%; float: left;}
   }
+table {
+  // display: table-cell;
+  border: 1px solid #036d80s;
+  text-align: left;
+}
+th {
+  background-color:#036d80;
+  border: 1px solid gray;
+  font-size: 1.2em;
+  color:white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+td {
+  border: 1px solid #036d80;
+  padding-left: 10px;
+  padding-right: 10px;
+}

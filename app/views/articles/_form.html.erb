@@ -46,15 +46,126 @@
     <%= f.label :hot_and_cold, "Hot and Cold", :class=>"edit-label"  %><br>
     <%= f.text_area :hot_and_cold, size:"200x6" %>
   </p>
-  <p>
-    <%= f.label :opp_lineup, "Opponent's Projected Lineup", :class=>"edit-label"  %><br>
-    <a href="https://docs.google.com/spreadsheets/d/198GV9bp8GDcmajbt--Jp9M2iFFOdqEgtd7Dgpo2hti0/edit#gid=0" target="_blank">
-      Edit Google Doc with Opposition Lineup here. </a>
-  </p>
+
   <p>
     <%= f.label :sharks_lineup, "Sharks Projected Lineup", :class=>"edit-label"  %><br>
-  <a href="https://docs.google.com/spreadsheets/d/1MrnJLMRrMkW86J0BvOvXHybBygHmMiV8g1ljrA6Fw2I/edit#gid=0" target="_blank">
-      Edit Google Doc with Sharks Lineup here. </a>  <br> <br> </p>
+  </p>
+    <table>
+      <tr>
+        <td> Goaltender </td>
+        <td> <%= f.text_area :sharks_gk, size:"50x1" %> </td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td> Defense </td>
+      </tr>
+      <tr>
+        <td> <%= f.text_area :sharks_d1, size:"30x1" %> </td>
+        <td> <%= f.text_area :sharks_d2, size:"30x1" %> </td>
+      </tr>
+      <tr>
+        <td> <%= f.text_area :sharks_d3, size:"30x1" %> </td>
+        <td> <%= f.text_area :sharks_d4, size:"30x1" %> </td>
+      </tr>
+      <tr>
+        <td> <%= f.text_area :sharks_d5, size:"30x1" %> </td>
+        <td> <%= f.text_area :sharks_d6, size:"30x1" %> </td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td> Defense </td>
+      </tr>
+      <tr>
+        <td> Left Wing </td>
+        <td> Center </td>
+        <td> Right Wing </td>
+      </tr>
+      <tr>
+        <td> <%= f.text_area :sharks_f1, size:"30x1" %> </td>
+        <td> <%= f.text_area :sharks_f2, size:"30x1" %> </td>
+        <td> <%= f.text_area :sharks_f3, size:"30x1" %> </td>
+      </tr>
+      <tr>
+        <td> <%= f.text_area :sharks_f4, size:"30x1" %> </td>
+        <td> <%= f.text_area :sharks_f5, size:"30x1" %> </td>
+        <td> <%= f.text_area :sharks_f6, size:"30x1" %> </td>
+      </tr>
+      <tr>
+        <td> <%= f.text_area :sharks_f7, size:"30x1" %> </td>
+        <td> <%= f.text_area :sharks_f8, size:"30x1" %> </td>
+        <td> <%= f.text_area :sharks_f9, size:"30x1" %> </td>
+      </tr>
+            <tr>
+        <td> <%= f.text_area :sharks_f10, size:"30x1" %> </td>
+        <td> <%= f.text_area :sharks_f11, size:"30x1" %> </td>
+        <td> <%= f.text_area :sharks_f12, size:"30x1" %> </td>
+      </tr>
+    </table>
+  <!-- <a href="https://docs.google.com/spreadsheets/d/1MrnJLMRrMkW86J0BvOvXHybBygHmMiV8g1ljrA6Fw2I/edit#gid=0" target="_blank">
+      Edit Google Doc with Sharks Lineup here. </a>  <br> <br> </p> -->
+
+  <p>
+    <%= f.label :opp_lineup, "Opponent's Projected Lineup", :class=>"edit-label"  %><br>
+
+    <table>
+      <tr>
+        <td> Goaltender </td>
+        <td> <%= f.text_area :opp_gk, size:"50x1" %> </td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td> Defense </td>
+      </tr>
+      <tr>
+        <td> <%= f.text_area :opp_d1, size:"30x1" %> </td>
+        <td> <%= f.text_area :opp_d2, size:"30x1" %> </td>
+      </tr>
+      <tr>
+        <td> <%= f.text_area :opp_d3, size:"30x1" %> </td>
+        <td> <%= f.text_area :opp_d4, size:"30x1" %> </td>
+      </tr>
+      <tr>
+        <td> <%= f.text_area :opp_d5, size:"30x1" %> </td>
+        <td> <%= f.text_area :opp_d6, size:"30x1" %> </td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td> Defense </td>
+      </tr>
+      <tr>
+        <td> Left Wing </td>
+        <td> Center </td>
+        <td> Right Wing </td>
+      </tr>
+      <tr>
+        <td> <%= f.text_area :opp_f1, size:"30x1" %> </td>
+        <td> <%= f.text_area :opp_f2, size:"30x1" %> </td>
+        <td> <%= f.text_area :opp_f3, size:"30x1" %> </td>
+      </tr>
+      <tr>
+        <td> <%= f.text_area :opp_f4, size:"30x1" %> </td>
+        <td> <%= f.text_area :opp_f5, size:"30x1" %> </td>
+        <td> <%= f.text_area :opp_f6, size:"30x1" %> </td>
+      </tr>
+      <tr>
+        <td> <%= f.text_area :opp_f7, size:"30x1" %> </td>
+        <td> <%= f.text_area :opp_f8, size:"30x1" %> </td>
+        <td> <%= f.text_area :opp_f9, size:"30x1" %> </td>
+      </tr>
+            <tr>
+        <td> <%= f.text_area :opp_f10, size:"30x1" %> </td>
+        <td> <%= f.text_area :opp_f11, size:"30x1" %> </td>
+        <td> <%= f.text_area :opp_f12, size:"30x1" %> </td>
+      </tr>
+    </table>
+    <!-- <a href="https://docs.google.com/spreadsheets/d/198GV9bp8GDcmajbt--Jp9M2iFFOdqEgtd7Dgpo2hti0/edit#gid=0" target="_blank">
+      Edit Google Doc with Opposition Lineup here. </a> -->
+  </p>
+
   <p>
     <%= f.label :link1_text, "Further Reading from Around the Web", :class=>"edit-label"  %><br><br>
 

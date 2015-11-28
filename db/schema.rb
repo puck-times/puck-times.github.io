@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151030233929) do
+ActiveRecord::Schema.define(version: 20151128192909) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,44 @@ ActiveRecord::Schema.define(version: 20151030233929) do
     t.integer  "photo3_file_size"
     t.datetime "photo3_updated_at"
     t.date     "game_date"
+    t.string   "opp_gk"
+    t.string   "opp_d1"
+    t.string   "opp_d2"
+    t.string   "opp_d3"
+    t.string   "opp_d4"
+    t.string   "opp_d5"
+    t.string   "opp_d6"
+    t.string   "opp_f1"
+    t.string   "opp_f2"
+    t.string   "opp_f3"
+    t.string   "opp_f4"
+    t.string   "opp_f5"
+    t.string   "opp_f6"
+    t.string   "opp_f7"
+    t.string   "opp_f8"
+    t.string   "opp_f9"
+    t.string   "opp_f10"
+    t.string   "opp_f11"
+    t.string   "opp_f12"
+    t.string   "sharks_gk"
+    t.string   "sharks_d1"
+    t.string   "sharks_d2"
+    t.string   "sharks_d3"
+    t.string   "sharks_d4"
+    t.string   "sharks_d5"
+    t.string   "sharks_d6"
+    t.string   "sharks_f1"
+    t.string   "sharks_f2"
+    t.string   "sharks_f3"
+    t.string   "sharks_f4"
+    t.string   "sharks_f5"
+    t.string   "sharks_f6"
+    t.string   "sharks_f7"
+    t.string   "sharks_f8"
+    t.string   "sharks_f9"
+    t.string   "sharks_f10"
+    t.string   "sharks_f11"
+    t.string   "sharks_f12"
   end
 
   create_table "comments", force: :cascade do |t|

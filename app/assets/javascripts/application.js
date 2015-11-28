@@ -22,11 +22,7 @@ $(document).ready(function() {
    $("p").each(function () {
      $(this).replaceWith("<li>" + $(this).html() + "</li>");
     });
-   // $("http://").each(function () {
-   //    $(this).replaceWith("<a href='");
-   // });
-   // $(".html").each(function () {
-   //    $(this).replaceWith("' />");
+
    $(".link1").each(function () {
       var a = $(this).next('div'); // Find the next div -- should be a link
       $(this).wrap('<a href="' + a.text() + '"></a>'); // And wrap text in an anchor tag
