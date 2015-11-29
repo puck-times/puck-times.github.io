@@ -52,30 +52,7 @@
   </p>
     <table>
       <tr>
-        <td> Goaltender </td>
-        <td> <%= f.text_area :sharks_gk, size:"50x1" %> </td>
-      </tr>
-    </table>
-    <table>
-      <tr>
-        <td> Defense </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_area :sharks_d1, size:"30x1" %> </td>
-        <td> <%= f.text_area :sharks_d2, size:"30x1" %> </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_area :sharks_d3, size:"30x1" %> </td>
-        <td> <%= f.text_area :sharks_d4, size:"30x1" %> </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_area :sharks_d5, size:"30x1" %> </td>
-        <td> <%= f.text_area :sharks_d6, size:"30x1" %> </td>
-      </tr>
-    </table>
-    <table>
-      <tr>
-        <td> Defense </td>
+        <td> Forwards </td>
       </tr>
       <tr>
         <td> Left Wing </td>
@@ -103,38 +80,38 @@
         <td> <%= f.text_area :sharks_f12, size:"30x1" %> </td>
       </tr>
     </table>
+    <table>
+      <tr>
+        <td> Defense </td>
+      </tr>
+      <tr>
+        <td> <%= f.text_area :sharks_d1, size:"30x1" %> </td>
+        <td> <%= f.text_area :sharks_d2, size:"30x1" %> </td>
+      </tr>
+      <tr>
+        <td> <%= f.text_area :sharks_d3, size:"30x1" %> </td>
+        <td> <%= f.text_area :sharks_d4, size:"30x1" %> </td>
+      </tr>
+      <tr>
+        <td> <%= f.text_area :sharks_d5, size:"30x1" %> </td>
+        <td> <%= f.text_area :sharks_d6, size:"30x1" %> </td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td> Goaltender </td>
+        <td> <%= f.text_area :sharks_gk, size:"50x1" %> </td>
+      </tr>
+    </table>
+
   <!-- <a href="https://docs.google.com/spreadsheets/d/1MrnJLMRrMkW86J0BvOvXHybBygHmMiV8g1ljrA6Fw2I/edit#gid=0" target="_blank">
       Edit Google Doc with Sharks Lineup here. </a>  <br> <br> </p> -->
 
   <p>
     <%= f.label :opp_lineup, "Opponent's Projected Lineup", :class=>"edit-label"  %><br>
-
     <table>
       <tr>
-        <td> Goaltender </td>
-        <td> <%= f.text_area :opp_gk, size:"50x1" %> </td>
-      </tr>
-    </table>
-    <table>
-      <tr>
-        <td> Defense </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_area :opp_d1, size:"30x1" %> </td>
-        <td> <%= f.text_area :opp_d2, size:"30x1" %> </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_area :opp_d3, size:"30x1" %> </td>
-        <td> <%= f.text_area :opp_d4, size:"30x1" %> </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_area :opp_d5, size:"30x1" %> </td>
-        <td> <%= f.text_area :opp_d6, size:"30x1" %> </td>
-      </tr>
-    </table>
-    <table>
-      <tr>
-        <td> Defense </td>
+        <td> Forwards </td>
       </tr>
       <tr>
         <td> Left Wing </td>
@@ -162,6 +139,29 @@
         <td> <%= f.text_area :opp_f12, size:"30x1" %> </td>
       </tr>
     </table>
+    <table>
+      <tr>
+        <td> Defense </td>
+      </tr>
+      <tr>
+        <td> <%= f.text_area :opp_d1, size:"30x1" %> </td>
+        <td> <%= f.text_area :opp_d2, size:"30x1" %> </td>
+      </tr>
+      <tr>
+        <td> <%= f.text_area :opp_d3, size:"30x1" %> </td>
+        <td> <%= f.text_area :opp_d4, size:"30x1" %> </td>
+      </tr>
+      <tr>
+        <td> <%= f.text_area :opp_d5, size:"30x1" %> </td>
+        <td> <%= f.text_area :opp_d6, size:"30x1" %> </td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td> Goaltender </td>
+        <td> <%= f.text_area :opp_gk, size:"50x1" %> </td>
+      </tr>
+    </table>
     <!-- <a href="https://docs.google.com/spreadsheets/d/198GV9bp8GDcmajbt--Jp9M2iFFOdqEgtd7Dgpo2hti0/edit#gid=0" target="_blank">
       Edit Google Doc with Opposition Lineup here. </a> -->
   </p>
@@ -179,16 +179,16 @@
     <%= f.label :link2_url, "Enter URL for article #2" %><br>
     <%= f.text_area :link2_url, size:"100x1" %><br> <br>
 
-    <%= f.label :link3_text, "Enter text for article #3" %><br>
-    <%= f.text_area :link3_text, size:"100x1" %> <br>
-    <%= f.label :link3_url, "Enter URL for article #3" %><br>
-    <%= f.text_area :link3_url, size:"100x1" %><br> <br>
   </p>
   <p>
     <%= f.label :memorable_moments, "Memorable Moments", :class=>"edit-label"  %><br>
     <%= f.text_area :memorable_moments, size:"200x6" %>
     <%= f.label :need_to_know, "Attach .GIF file", :class=>"attach-photo"  %><br>
     <%= f.file_field :photo3 %>
+    <%= f.label :link3_text, "Enter text for video link" %><br>
+    <%= f.text_area :link3_text, size:"100x1" %> <br>
+    <%= f.label :link3_url, "Enter URL for Youtube video" %><br>
+    <%= f.text_area :link3_url, size:"100x1" %><br> <br>
   </p>
     <!-- %= f.label :share, "SHARE & SUBSCRIBE", :class=>"edit-label"  %><br>
     %= f.text_area :share, size:"200x6" %>

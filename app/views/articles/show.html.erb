@@ -28,34 +28,6 @@
   <hr class="cl-b">
 
 <h2>SHARKS PROJECTED LINEUP</h2>
-<table class="lineups">
-      <tr>
-        <th> Goaltender </th>
-        <td> <%= simple_format @article.sharks_gk %> </td>
-      </tr>
-    </table>
-
-<hr class="cl-b">
-
-    <table class="defense">
-      <tr>
-        <th> Defense </th>
-      </tr>
-      <tr>
-        <td> <%= simple_format @article.sharks_d1 %> </td>
-        <td> <%= simple_format @article.sharks_d2 %> </td>
-      </tr>
-      <tr>
-        <td> <%= simple_format @article.sharks_d3 %> </td>
-        <td> <%= simple_format @article.sharks_d4 %> </td>
-      </tr>
-      <tr>
-        <td> <%= simple_format @article.sharks_d5 %> </td>
-        <td> <%= simple_format @article.sharks_d6 %> </td>
-      </tr>
-    </table>
-
-<hr class="cl-b">
 
     <table class="forwards">
       <tr>
@@ -84,38 +56,37 @@
         <td> <%= simple_format @article.sharks_f12 %> </td>
       </tr>
     </table>
-    <!-- <iframe class="lineups" src="https://docs.google.com/spreadsheets/d/1MrnJLMRrMkW86J0BvOvXHybBygHmMiV8g1ljrA6Fw2I/pubhtml?widget=true&headers=false&range=A1:E16&gid=0">
-  </iframe> -->
-
-  <h2>OPPOSITION PROJECTED LINEUP</h2>
-    <table class="lineups">
-      <tr>
-        <th> Goaltender </th>
-        <td> <%= simple_format @article.opp_gk %> </td>
-      </tr>
-    </table>
-
-<hr class="cl-b">
-
+    <br>
     <table class="defense">
       <tr>
         <th> Defense </th>
       </tr>
       <tr>
-        <td> <%= simple_format @article.opp_d1 %> </td>
-        <td> <%= simple_format @article.opp_d2 %> </td>
+        <td> <%= simple_format @article.sharks_d1 %> </td>
+        <td> <%= simple_format @article.sharks_d2 %> </td>
       </tr>
       <tr>
-        <td> <%= simple_format @article.opp_d3 %> </td>
-        <td> <%= simple_format @article.opp_d4 %> </td>
+        <td> <%= simple_format @article.sharks_d3 %> </td>
+        <td> <%= simple_format @article.sharks_d4 %> </td>
       </tr>
       <tr>
-        <td> <%= simple_format @article.opp_d5 %> </td>
-        <td> <%= simple_format @article.opp_d6 %> </td>
+        <td> <%= simple_format @article.sharks_d5 %> </td>
+        <td> <%= simple_format @article.sharks_d6 %> </td>
+      </tr>
+    </table>
+    <br>
+    <table class="lineups">
+      <tr>
+        <th> Goaltender </th>
+        <td> <%= simple_format @article.sharks_gk %> </td>
       </tr>
     </table>
 
 <hr class="cl-b">
+    <!-- <iframe class="lineups" src="https://docs.google.com/spreadsheets/d/1MrnJLMRrMkW86J0BvOvXHybBygHmMiV8g1ljrA6Fw2I/pubhtml?widget=true&headers=false&range=A1:E16&gid=0">
+  </iframe> -->
+
+  <h2>OPPOSITION PROJECTED LINEUP</h2>
 
     <table class="forwards">
       <tr>
@@ -144,30 +115,50 @@
         <td> <%= simple_format @article.opp_f12 %> </td>
       </tr>
     </table>
+    <br>
+    <table class="defense">
+      <tr>
+        <th> Defense </th>
+      </tr>
+      <tr>
+        <td> <%= simple_format @article.opp_d1 %> </td>
+        <td> <%= simple_format @article.opp_d2 %> </td>
+      </tr>
+      <tr>
+        <td> <%= simple_format @article.opp_d3 %> </td>
+        <td> <%= simple_format @article.opp_d4 %> </td>
+      </tr>
+      <tr>
+        <td> <%= simple_format @article.opp_d5 %> </td>
+        <td> <%= simple_format @article.opp_d6 %> </td>
+      </tr>
+    </table>
+    <br>
+    <table class="lineups">
+      <tr>
+        <th> Goaltender </th>
+        <td> <%= simple_format @article.opp_gk %> </td>
+      </tr>
+    </table>
+
+
     <!-- <iframe class="lineups" src="https://docs.google.com/spreadsheets/d/198GV9bp8GDcmajbt--Jp9M2iFFOdqEgtd7Dgpo2hti0/pubhtml?widget=true&amp;headers=false&range=A1:E16&gid=0"></iframe> -->
   <hr class="cl-b">
 
   <hr class="cl-b">
   <h2>FURTHER READING FROM AROUND THE WEB</h2>
-      <div class="link1">
-      <%= simple_format @article.link1_text %>
-      </div>
+      <div class="link1"> <%= simple_format @article.link1_text %> </div>
       <div class="invisible"> <%= simple_format @article.link1_url %> </div>
 
-      <div class="link1">
-      <%= simple_format @article.link2_text %>
-      </div>
+      <div class="link1"> <%= simple_format @article.link2_text %> </div>
       <div class="invisible"> <%= simple_format @article.link2_url %> </div>
 
-      <!--<div class="link1">
-      <%= simple_format @article.link3_text %>
-      </div>
-      <div class="invisible"> <%= simple_format @article.link3_url %> </div> -->
   <hr class="cl-b">
   <h2>MEMORABLE MOMENTS</h2>
   <%= simple_format @article.memorable_moments %>
   <%= image_tag @article.photo3.url, :class=>"article-photos moments-gif" %>
-
+      <div class="link1"> <%= simple_format @article.link3_text %></div>
+      <div class="invisible"> <%= simple_format @article.link3_url %> </div>
   <hr class="cl-b">
   <h2>SUBSCRIBE NOW</h2>
   <!-- simple_format @article.share %> -->
